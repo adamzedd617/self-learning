@@ -9,18 +9,19 @@ done
   
 echo ${nums[*]}
 
-
-for ((x = 0; x<3; x++))
+x=0
+while [ $x -le 3 ];
 do
     for((y = 0; y<3-x-1; y++))
     do
         if [ ${nums[y]} -gt ${nums[$((y+1))]} ]
         then
-            temp=${nums[y]}
+            tmp=${nums[y]}
             nums[$y]=${nums[$((y+1))]}  
-            nums[$((y+1))]=$temp
+            nums[$((y+1))]=$tmp
         fi
     done
+    x=$(( $x + 1 ))
 done
   
 echo "Sorting..."
