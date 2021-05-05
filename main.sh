@@ -24,5 +24,5 @@ do
     x=$(( $x + 1 ))
 done
   
-echo "Sorting..."
+echo "Sorting... :"
 printf '%s ' "${nums[*]}"
